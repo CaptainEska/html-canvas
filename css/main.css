@@ -1,0 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 20px auto;
+  border: 2px solid #ccc;
+  text-align: center;
+}

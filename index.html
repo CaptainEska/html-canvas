@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Canvas</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <h1>Canvas</h1>
+    <div class="rec">
+      <h2>Rectangle</h2>
+      <canvas id="myCanvas" width="200" height="100" style="border:2px solid #000;"></canvas>
+    </div>
+    <div class="circle">
+      <h2>Circle</h2>
+      <canvas id="myCanvas-2" width="200" height="100" style="border:2px solid #000;"></canvas>
+    </div>
+    <div class="circle">
+      <h2>Draw a text</h2>
+      <canvas id="myCanvas-3" width="200" height="100" style="border:2px solid #000;"></canvas>
+    </div>
+    <div class="circle">
+      <h2>Stroke text</h2>
+      <canvas id="myCanvas-4" width="200" height="100" style="border:2px solid #000;"></canvas>
+    </div>
+  </div>
+</body>
+
+<script>
+  var c = document.getElementById('myCanvas');
+  var ctx = c.getContext("2d");
+  ctx.moveTo(0, 0);
+  ctx.lineTo(200, 100);
+  ctx.stroke();
+
+  ctx.moveTo(200, 0);
+  ctx.lineTo(0, 100);
+  ctx.stroke();
+
+  var a = document.getElementById('myCanvas-2');
+  var ctr = a.getContext("2d");
+  ctr.beginPath();
+  ctr.arc(95, 50, 40, 0, 2 * Math.PI);
+  ctr.stroke();
+
+  var b = document.getElementById('myCanvas-3');
+  var cta = b.getContext("2d");
+  cta.font = "30px Arial";
+  cta.fillText("Hello world", 10, 50);
+
+  var d = document.getElementById('myCanvas-4');
+  var cte = d.getContext("2d");
+  cte.font = "30px Arial";
+  cte.strokeText("Hello World", 10, 50);
+</script>
+
+</html>
